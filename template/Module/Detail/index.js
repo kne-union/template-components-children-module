@@ -2,7 +2,6 @@ import { createWithRemoteLoader } from '@kne/remote-loader';
 import Fetch from '@kne/react-fetch';
 import { useSearchParams } from 'react-router-dom';
 import Actions from '../Actions';
-import RightOptions from './RightOptions';
 
 const Detail = createWithRemoteLoader({
   modules: ['components-core:Layout@Page', 'components-core:Layout@PageHeader', 'components-core:Global@usePreset', 'components-core:InfoPage', 'components-core:Descriptions']
@@ -38,7 +37,7 @@ const Detail = createWithRemoteLoader({
                           />
                         }
             />
-          } option={<RightOptions />}>
+          }>
             <InfoPage>
               <InfoPage.Part title="详情信息">
                 <InfoPage.Part>
