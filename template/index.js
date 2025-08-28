@@ -33,6 +33,13 @@ const AppChildren = createWithRemoteLoader({
         {
           path: 'module',
           loader: () => import('./Module')
+        },
+        {
+          path: 'module/detail',
+          loader: () => import('./Module/Detail'),
+          elementProps: {
+            menu: null
+          }
         }
       ]}
     />

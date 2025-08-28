@@ -10,6 +10,7 @@ const Actions = createWithRemoteLoader({
 
   const actionList = [
     {
+      type:'primary',
       ...props,
       buttonComponent: Save,
       children: '编辑'
