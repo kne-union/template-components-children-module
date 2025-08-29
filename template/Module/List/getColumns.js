@@ -17,8 +17,13 @@ const getColumns = ({navigate}) => {
       name: 'status',
       title: '状态',
       type: 'tag',
-      valueOf: () => {
-        return { type: 'success', text: '成功' };
+      valueOf: (item) => {
+        if (item.status === 'open') {
+          return { type: 'success', text: '开启' };
+        }
+        if (item.status === 'closed') {
+          return { type: 'danger', text: '关闭' };
+        }
       }
     },
     {
